@@ -1,1 +1,10 @@
-<h3>hello</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <label>Username</label>
+            <input type="test" class="form-control" [(ngModel)]="username">
+            <p>{{username}}</p>
+            <button class="btn btn-primary" (click)="username = ''" [disabled]="!username">Reset User</button>
+        </div>
+    </div>
+</div>
