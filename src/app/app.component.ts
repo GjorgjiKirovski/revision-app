@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showParagraph = false;
+  logs = [];
+
+  constructor(){}
+
+  toggleDetails(){
+    this.showParagraph = !this.showParagraph;
+    this.logs.push(new Date()+ (this.showParagraph ? ' showing' : ' hiding') + ' the paragraph, length :'+(this.logs.length+1));
+  }
+
+
 }
