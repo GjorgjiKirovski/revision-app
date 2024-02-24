@@ -1,7 +1,20 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
+          <h3>Bind it!</h3>
         </div>
     </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <app-game-control (intervalFired)="onCounterIncrement($event)"></app-game-control>
+      </div>
+    </div>
+    <div class="row"  *ngFor="let number of numbers">
+      <div class="col-xs-12">
+        <app-odd *ngIf="number % 2 === 0">
+          <p #oddNumberParagraph>Odd - {{number}}</p>
+        </app-odd>
+        <app-even *ngIf="number % 2 !== 0" [localEvenNumber]="number"></app-even>
+      </div>
+    </div>
 </div>
-
