@@ -52,5 +52,6 @@ export class AppComponent {
       status: 'stable',
       started: new Date(15, 1, 2017)
     });
+    this.servers = [...this.servers]
   }
 }
